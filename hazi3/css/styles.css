@@ -1,0 +1,206 @@
+/* Alap stílusok */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(172, 240, 217);
+    margin: 0; /* Margó eltávolítása a test körül */
+    font-size: 1em; /* Alap szövegméret */
+}
+
+header {
+    background-color: #3d95cb;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-size: 2em;
+}
+
+/* Navigációs menü stílusai */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    background-color: #3d95cb;
+    padding: 10px;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #c10808;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Szekció és szöveg stílusai */
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Középre igazítás */
+}
+
+/* Kép stílusai */
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s, filter 0.3s;
+    display: flex;
+    flex-direction: column; /* Képek és szövegek középre igazítása */
+    align-items: center;
+}
+
+.image-container img {
+    width: 150px;
+    border-radius: 15px; /* Lekerekített szélek */
+    transition: transform 0.3s, filter 0.3s;
+    max-width: 100%; /* Rugalmas méret */
+    height: auto;
+}
+
+.image-container p {
+    margin-top: 5px;
+    color: #333;
+}
+
+/* Hover hatás a képekre és szövegre */
+.image-container:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+.image-container:hover p {
+    color: #c10808;
+}
+
+/* További képek szekciója */
+.related-images {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.related-images h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Távolság a képek között */
+}
+
+.image-item {
+    position: relative; /* A pozicionálás lehetővé teszi, hogy a hover effektus működjön */
+}
+
+.image-item img {
+    width: 100%;
+    max-width: 200px; /* Maximális szélesség, hogy ne legyenek túl nagyok */
+    border-radius: 10px;
+    transition: filter 0.3s; /* Csak a szűrési hatásra van szükség */
+}
+
+.image-item img:hover {
+    filter: none; /* Eltávolítja a szűrőt a hover állapotban, tehát normál méretben és világosabban jelenik meg */
+}
+
+/* Navigációs gombok stílusai */
+.navigation-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navigation-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navigation-buttons button:hover {
+    background-color: #c91010;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Reszponzív stílusok */
+@media screen and (max-width: 768px) {
+    .images {
+        width: 100%;
+        flex-direction: column; /* Képek jobban elférnek egymás alatt */
+    }
+
+    .image-container img {
+        width: 120px; /* Kisebb képek mobilon, de nagyobb mint 100px */
+    }
+
+    header {
+        font-size: 1.5em; /* Kisebb fejléc betűméret mobilon */
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+
+    .image {
+        max-width: 90%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .image-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-item img {
+        max-width: 100%;
+    }
+}

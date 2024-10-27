@@ -1,0 +1,173 @@
+body {
+    background-color: #D7B520;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #e7e6e6;
+    margin-bottom: 20px;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+aside {
+    width: 30%;
+    float: left;
+    padding: 20px;
+    background-color: #6BA4D9;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+section {
+    width: 67%;
+    float: right;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#section1 {
+    background-color: #fbe5d6;
+}
+
+#section2 {
+    background-color: #fff2cc;
+}
+
+#section3 {
+    background-color: #deebf7;
+}
+
+section img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    max-width: 300px;
+    height: auto;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: 20px;
+    background-color: #e7e6e6;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Form styles */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    font-style: italic;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+button {
+    background-color: #e7e6e6;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Navigation */
+nav {
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    aside {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+    }
+
+    section {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
+
+    section img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+        max-width: 100%;
+    }
+}

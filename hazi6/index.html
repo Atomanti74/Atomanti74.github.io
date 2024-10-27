@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strandolós oldal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Strandolós oldal</h1>
+            <img src="images/strand.jpg" alt="Strandolós kép">
+        </header>
+
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="#section1">Balaton</a></li>
+                    <li><a href="#section2">Tisza-tó</a></li>
+                    <li><a href="#section3">Szelidi-tó</a></li>
+                </ul>
+            </nav>
+
+            <form>
+                <h2>Kérem töltse ki a jelentkezési űrlapot</h2>
+                <label for="name">Név</label>
+                <input type="text" id="name" name="name" required maxlength="50">
+                
+                <label for="email">E-mail cím</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Telefonszám</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="lake">Melyik tó érdekli?</label>
+                <select id="lake" name="lake">
+                    <option value="balaton">Balaton</option>
+                    <option value="tiszato">Tisza-tó</option>
+                    <option value="szelidito">Szelidi-tó</option>
+                </select>
+                
+                <label for="accommodation">Milyen szállást keres?</label>
+                <input type="checkbox" id="hotel" name="accommodation" value="hotel"> Szálloda
+                <input type="checkbox" id="apartment" name="accommodation" value="apartment"> Apartmanház
+                <input type="checkbox" id="camping" name="accommodation" value="camping"> Kemping
+                
+                <label for="meal">Milyen ellátás legyen?</label>
+                <input type="radio" id="full" name="meal" value="full" required> Teljes ellátás
+                <input type="radio" id="half" name="meal" value="half"> Félpanzió
+                <input type="radio" id="breakfast" name="meal" value="breakfast"> Csak reggeli
+                <input type="radio" id="no" name="meal" value="no"> Nem kérek ellátást
+                
+                <label for="message">Egyéb üzenet</label>
+                <textarea id="message" name="message"></textarea>
+                
+                <button type="submit">Mehet</button>
+            </form>
+        </aside>
+
+        <section id="section1">
+            <h2>Balaton</h2>
+            <img src="images/balaton2.jpg" alt="Balaton">
+            <p>
+                A Balaton Közép-Európa legnagyobb tava, és nyáron rengeteg turistát vonz. 
+                A sekély, meleg víz különösen ideális a családok számára. Kerékpárút veszi körül, 
+                így könnyen felfedezheted két keréken is. Az északi parton található dombok és 
+                hegyek gyönyörű látványt nyújtanak, míg a déli part homokos strandokkal rendelkezik. 
+                A Tihanyi-félszigeten egy lenyűgöző apátság található, amely 1055-ben épült. Nyáron számos fesztivál, 
+                mint a Balaton Sound, élénkíti a környéket. Vitorlázás, vízisí és sok más vízi sport központjaként is ismert. A környező falvak és városok egyedi hangulatot és történelmet kínálnak. Télen a befagyott tó korcsolyázásra és jégvitorlázásra is alkalmas. 
+                A Balaton-felvidéki borok kóstolása kihagyhatatlan élmény.
+            </p>
+        </section>
+
+        <section id="section2">
+            <h2>Tisza-tó</h2>
+            <img src="images/tisza_tó.jpg" alt="Tisza-tó">
+            <p>
+                A Tisza-tó Magyarország legnagyobb mesterséges tava, ami természetvédelmi területként is ismert.
+                 A tó körül húzódó kerékpárút lehetőséget ad, hogy felfedezd a gyönyörű tájat és a vadon élő állatokat. 
+                 A madármegfigyelők számára igazi paradicsom, hiszen sok különleges faj található itt. A tó ideális helyszín 
+                 kajakozásra és kenuzásra, mivel a vize nyugodt és sekély. A tavat rengeteg horgász is látogatja, 
+                 hiszen gazdag halállománya van. A Tisza-tavi Ökocentrum Poroszlón található, ahol interaktív kiállítások 
+                 és akváriumok mutatják be a tó élővilágát. A környező falvak és városok barátságos hangulatukkal és 
+                 hagyományaikkal hívogatják a látogatókat. Nyáron a strandolók is előszeretettel keresik fel a tavat, 
+                 mivel a sekély víz gyorsan felmelegszik. A tó különböző szigetei és öblei izgalmas kalandokat kínálnak a 
+                 természetkedvelők számára. Az évente megrendezett Tisza-tavi Napok fesztivál színes programokkal várja az érdeklődőket.
+            </p>
+        </section>
+
+        <section id="section3">
+            <h2>Szelidi-tó</h2>
+            <img src="images/szelidi.jpg" alt="Szelidi-tó">
+            <p>
+                A Szelidi-tó Magyarország egyik rejtett gyöngyszeme, amely a természetkedvelők és a pihenni vágyók kedvelt úti célja.
+                 A tó kristálytiszta vize és homokos partjai ideálisak a fürdőzéshez és a napozáshoz. A környező terület bővelkedik 
+                 természeti szépségekben és gazdag növény- és állatvilágban, ami remek lehetőséget nyújt a természetjáróknak. 
+                 A tó partján kialakított sétány és bicikliút lehetőséget ad a kellemes sétákra és kerékpározásra. A horgászok is 
+                 szívesen látogatják a Szelidi-tavat, hiszen a víz gazdag halállománya mindig ígéretes fogásokat tartogat. 
+                 A tó körül található kempingek és szálláshelyek biztosítják a kényelmes pihenést. A környékbeli éttermekben és 
+                 vendéglőkben pedig ízletes helyi specialitások várják a vendégeket. A Szelidi-tó ideális helyszín családi nyaralásokhoz és 
+                 baráti kirándulásokhoz is. Az itt megrendezett rendezvények és fesztiválok mindig különleges élményt nyújtanak. 
+                A tó partján elhelyezkedő kilátók pedig csodálatos panorámát kínálnak a látogatóknak.
+            </p>
+        </section>
+
+        <footer>
+            <p>Strandolós oldal - Minden jog fenntartva</p>
+        </footer>
+    </div>
+
+</body>
+</html>

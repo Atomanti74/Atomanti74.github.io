@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #4CAF50;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #4CAF50;
+    color: rgb(232, 254, 245);
+    text-align: center;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+nav ul li a:hover {
+    background-color: #555; 
+    color: #fff; 
+}
+
+
+.sidebar {
+    grid-area: sidebar;
+    background-color:#8af39f;
+    padding: 1em;
+    image-orientation: flip;
+
+}
+
+.main-content {
+    grid-area: main;
+    padding: 1em;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.video-item {
+    background-color: #8af39f;
+    padding: 1em;
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Reszponzív design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas: 
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+        grid-template-columns: 2fr;
+        grid-template-rows: auto 2fr auto auto;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+}
+
+.vertical-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
+}
+.map-container {
+    margin-top: 1em;
+    text-align: center;
+}
+
+

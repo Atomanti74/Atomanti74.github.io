@@ -1,0 +1,208 @@
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px black;
+    background-image: url('images/buddha3.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+    grid-template-columns: 200px 1fr; 
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+    height: 100vh;
+    color: wheat;
+}
+
+.header {
+    grid-area: header;
+    background-color: transparent;
+    color: wheat; 
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-title {
+    font-size: 1.5em;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-links li {
+    margin: 0 15px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: wheat; 
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+.navbar-links a:hover {
+    color: #ff6347; 
+    text-decoration: underline; 
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.); 
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: wheat; 
+    font-weight: normal; 
+}
+
+.sidebar a:hover {
+    color: #ff6347; 
+    text-decoration: underline;
+}
+
+.content {
+    grid-area: content;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.); 
+}
+
+.collapsible .collapsible-header {
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.); 
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2em;
+}
+
+.collapsible .collapsible-content {
+    display: none;
+    padding: 0 18px;
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+
+.collapsible.active .collapsible-content {
+    display: block;
+    animation: fadeIn 0.5s ease-in;
+}
+
+footer {
+    grid-area: footer;
+    color: wheat; 
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    margin-top: 10px; 
+    font-weight: normal; 
+    background: none; 
+}
+
+.prayer-wheel {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px; 
+    cursor: pointer;
+    display: block; 
+}
+
+.prayer-wheel img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.prayer-wheel img:hover {
+    transform: rotate(360deg);
+}
+
+#mantra-box {
+    text-align: center;
+    margin-top: -60px; 
+    font-size: 1em;
+    color: wheat; 
+    background-color: rgba(0, 0, 0, 0.2); 
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+@media (max-width: 768px) {
+    body {
+        grid-template-rows: auto 1fr auto; 
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "content"
+            "footer";
+    }
+
+    .header {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}

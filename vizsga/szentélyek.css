@@ -1,0 +1,186 @@
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    font-family: "Sofia", sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px #ababab;
+    background-image: url('images/buddha-8661223_1280.jpg');
+    background-size: cover;
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+    height: 100vh;
+    color: wheat;
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: wheat;
+    font-size: 1.2em;
+}
+
+.navbar a:hover {
+    color: #ff6347;
+    text-decoration: underline;
+}
+
+.page-title {
+    margin: 0;
+    color: wheat;
+    font-size: 2em;
+}
+
+.content {
+    grid-area: content;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.shrines {
+    display: block;
+}
+
+.shrine {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.shrine a {
+    float: left;
+    margin-right: 10px;
+    overflow: hidden; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.shrine img {
+    max-width: 200px; 
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 10px; 
+    border: 1px solid #ddd;
+    padding: 5px;
+    background-color: white;
+}
+
+.shrine a:hover img {
+    transform: scale(1.5); 
+}
+
+.shrine p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: wheat;
+}
+
+footer {
+    grid-area: footer;
+    color: wheat;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    font-weight: normal;
+    background: none;
+}
+
+.prayer-wheel {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
+    cursor: pointer;
+    display: block;
+}
+
+.prayer-wheel img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.prayer-wheel img:hover {
+    transform: rotate(360deg);
+}
+
+#mantra-box {
+    text-align: center;
+    font-size: 1em;
+    color: wheat;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 1s;
+    position: fixed; 
+    bottom: 80px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#mantra-box.show {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "content"
+            "footer";
+    }
+
+    .header {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .shrines {
+        display: block;
+    }
+
+    .shrine {
+        display: block;
+        align-items: center;
+        float: none;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#menuToggle {
+    display: none;
+}
+
+#mobileMenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#mobileMenu ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+@media (max-width: 600px) {
+    #menuToggle {
+        display: block;
+        margin: 10px;
+    }
+
+    #mobileMenu {
+        display: none;
+    }
+
+    #mobileMenu ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #mobileMenu.show {
+        display: block;
+    }
+}

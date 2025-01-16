@@ -17,7 +17,7 @@ body {
     font-size: 20px;
     background-image: url('images/buddha3.jpg');
     background-size: cover;
-    background-attachment: fixed; 
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
@@ -37,23 +37,25 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     height: 150px;
     padding-bottom: 10px;
     background-color: rgba(0, 0, 0, 0);
+    padding-left: 10px;
 }
 
 .navbar {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .navbar a {
-    margin: 0 15px;
+    margin: 5px 0;
     text-decoration: none;
     color: royalblue;
-    font-size: 1.2em;
+    font-size: 0.8em;
 }
 
 .navbar a:hover {
@@ -64,7 +66,7 @@ body {
 .page-title {
     margin: 0;
     color: royalblue;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .content {
@@ -82,12 +84,13 @@ body {
 
 .map-container {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .contact {
-    flex: 1; 
+    flex: 1;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.);
     padding: 10px;
@@ -95,24 +98,27 @@ body {
 }
 
 .map {
-    float: right;
-    width: 30%;
-    margin-left: 20px;
+    width: 25%;
+    height: 150px;
+    margin-left: 0;
+    margin-top: 10px;
 }
 
 #mantra-box {
     text-align: center;
-    margin-top: -60px; 
+    margin-top: -60px;
     font-size: 1em;
     color: royalblue;
-    background-color: rgba(0, 0, 0, 0.2); 
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 10px;
-    border-radius: 5px; 
+    border-radius: 5px;
     position: absolute;
     width: 100%;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.5s; 
 }
 
 .footer {
@@ -121,9 +127,9 @@ body {
     text-align: center;
     padding: 10px;
     position: relative;
-    margin-top: 10px; 
-    font-weight: normal; 
-    background-color: (0, 0, 0, 0.5);
+    margin-top: 10px;
+    font-weight: normal;
+    background-color: rgba(0, 0, 0, 0.);
 }
 
 .prayer-wheel {
@@ -131,7 +137,7 @@ body {
     height: 60px;
     margin: 0 auto 10px;
     cursor: pointer;
-    display: block; 
+    display: block;
 }
 
 .prayer-wheel img {
@@ -140,9 +146,6 @@ body {
     transition: transform 0.5s ease-in-out;
 }
 
-.prayer-wheel img:hover {
-    transform: rotate(360deg);
-}
 
 @media (max-width: 992px) {
     .container {
@@ -152,7 +155,15 @@ body {
 
 @media (max-width: 768px) {
     .map {
-        height: 300px;
+        display: none;
+    }
+
+    .contact::after {
+        content: "Klikkelj a linkre a térkép megtekintéséhez.";
+        display: block;
+        color: red;
+        font-size: 1em;
+        margin-top: 10px;
     }
 
     .prayer-wheel {
@@ -168,7 +179,15 @@ body {
 
 @media (max-width: 576px) {
     .map {
-        height: 200px;
+        display: none;
+    }
+
+    .contact::after {
+        content: "Klikkelj a linkre a térkép megtekintéséhez.";
+        display: block;
+        color: red;
+        font-size: 1em;
+        margin-top: 10px;
     }
 
     .prayer-wheel {

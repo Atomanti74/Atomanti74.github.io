@@ -15,24 +15,23 @@
 body {
     font-family: "Sofia", sans-serif;
     font-size: 20px;
-   
-   background-image: url(images/buddha-8968327_640.jpg);
+    background-image: url('images/buddha-8968327_640.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
     display: grid;
-    grid-template-rows: 210px 1fr 1fr 1fr auto; 
+    grid-template-rows: 210px 1fr 1fr 1fr auto;
     grid-template-columns: 200px 1fr;
     grid-template-areas:
         "header header"
         "sidebar section1"
         "sidebar section2"
         "sidebar section3"
-        "footer footer"; 
+        "footer footer";
     height: 100vh;
-    color:rgb(26, 131, 196); 
+    color: rgb(26, 131, 196);
 }
 
 #loading-screen {
@@ -57,24 +56,23 @@ body {
 
 .header {
     grid-area: header;
-    text-align: center; 
-    text-decoration: double;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
     height: 200px;
     padding-bottom: 20px;
     padding-left: 20px;
     margin-bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.); 
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .header-title {
-    color: rgb(26, 131, 196); 
-    font-size: 3em; 
-    text-shadow: 1px 1px 2px #000000; 
-    margin-bottom: 20px; 
+    color: rgb(26, 131, 196);
+    font-size: 3em;
+    text-shadow: 1px 1px 2px #000000;
+    margin-bottom: 20px;
 }
 
 .navbar {
@@ -83,6 +81,7 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 .navbar li {
@@ -90,26 +89,25 @@ body {
 }
 
 .navbar a {
-    text-decoration-line: none;
-    color:rgb(26, 131, 196);
+    text-decoration: none;
+    color: rgb(26, 131, 196);
     font-size: 1.5em;
-    font-weight: normal; 
+    font-weight: normal;
 }
 
 .navbar a:hover {
-    color: #080001; 
-    text-decoration: underline; 
-   
+    color: #080001;
+    text-decoration: underline;
 }
 
 .sidebar {
     grid-area: sidebar;
     padding: 20px;
     margin: 20px;
-    margin-top: 10px; 
-    margin-bottom: 10px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
     box-sizing: border-box;
-    background-color: transparent; 
+    background-color: transparent;
     overflow: auto;
 }
 
@@ -124,13 +122,13 @@ body {
 
 .sidebar a {
     text-decoration: none;
-    color:  rgb(26, 131, 196);
+    color: rgb(26, 131, 196);
     font-weight: bold;
 }
 
 .sidebar a:hover {
-    color: #fdfdfd; 
-    text-decoration: underline; 
+    color: #fdfdfd;
+    text-decoration: underline;
 }
 
 .section1, .section2, .section3 {
@@ -138,16 +136,16 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;
-    font-weight: normal; 
-    display: none; 
-    background-color: rgba(0, 0, 0, 0.); 
+    font-weight: normal;
+    display: none;
+    background-color: rgba(0, 0, 0, 0);
     color: #440f06;
 }
 
 .collapsible .collapsible-header {
     cursor: pointer;
     padding: 10px;
-    background-color:rgba(0, 0, 0, 0.1); 
+    background-color: rgba(0, 0, 0, 0.1);
     border: none;
     text-align: left;
     outline: none;
@@ -157,8 +155,8 @@ body {
 .collapsible .collapsible-content {
     display: none;
     padding: 0 18px;
-    background-color: rgba(0, 0, 0, 0.5); 
-    color:wheat;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: wheat;
 }
 
 .collapsible.active .collapsible-content {
@@ -168,18 +166,20 @@ body {
 
 #mantra-box {
     text-align: center;
-    margin-top: -60px; 
+    margin-top: -60px;
     font-size: 1em;
     font-weight: normal;
-    color:  wheat;
-    background-color: rgba(0, 0, 0, 0.5); 
+    color: wheat;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
-    border-radius: 5px; 
+    border-radius: 5px;
     position: absolute;
     width: 100%;
     left: 0;
     top: 50%;
-    transform: translateY(-50%); 
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .footer {
@@ -187,9 +187,9 @@ body {
     text-align: center;
     padding: 10px;
     position: relative;
-    margin-top: 10px; 
-    font-weight: normal; 
-    background-color: (0, 0, 0, 0,);
+    margin-top: 10px;
+    font-weight: normal;
+    background-color: rgba(0, 0, 0, 1.);
 }
 
 .prayer-wheel {
@@ -197,7 +197,7 @@ body {
     height: 60px;
     margin: 0 auto 10px;
     cursor: pointer;
-    display: block; 
+    display: block;
 }
 
 .prayer-wheel img {
@@ -206,29 +206,23 @@ body {
     transition: transform 0.5s ease-in-out;
 }
 
-.prayer-wheel img:hover {
-    transform: rotate(360deg);
-}
-
 @media (max-width: 768px) {
     body {
-        grid-template-rows: auto 1fr 1fr 1fr auto; 
+        grid-template-rows: auto 1fr 1fr 1fr auto;
         grid-template-columns: 1fr;
         grid-template-areas:
             "header"
-            "sidebar"
             "section1"
             "section2"
             "section3"
-            "footer"; 
+            "footer";
     }
 
     .header {
         height: auto;
-    }
-
-    .sidebar {
-        margin: 0;
+        text-align: left; 
+        flex-direction: column;
+        padding-left: 20px;
     }
 
     .navbar {
@@ -238,5 +232,13 @@ body {
 
     .navbar li {
         margin: 10px 0;
+    }
+
+    .sidebar {
+        display: none; 
+    }
+
+    .section1 {
+        display: none;
     }
 }
